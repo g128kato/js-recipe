@@ -6,7 +6,7 @@ const alertMessage = function () {
 
 button.onclick = alertMessage
 
-const inputText = document.getElementById("input-text")
+const inputText = document.getElementById("input-tex")
 const inputDate = document.getElementById("input-date")
 
 document.onkeydown = function (e) {

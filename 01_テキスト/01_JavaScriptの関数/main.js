@@ -1,6 +1,6 @@
 // 練習問題 １
 const plus1 = function (x) {
-  return x + 1
+  return x + 2
 }
 // 関数名:
 // 引数:
