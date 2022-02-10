@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veu ATM</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>入力画面</h2>
+      <input type="number" v-model="nyuryokugaku" />
+      <div>入金額:{{nyuryokugaku}}</div>
+      <button v-on:click="nyukin">入金</button>
+      <button v-on:click="syukkin" v-bind:disabled="zandaka <= 0">出金</button>
+
+      <h2>口座残高</h2>
+      <div>残高:{{zandaka}}</div>
+
+      <h2>取引記録</h2>
+      <div v-for="log in logs">
+        <div>日付:{{log.date}}</div>
+        <div>操作:{{log.type}}</div>
+        <div>金額:{{log.money}}</div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
